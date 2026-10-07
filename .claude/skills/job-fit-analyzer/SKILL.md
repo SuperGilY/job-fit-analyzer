@@ -84,7 +84,7 @@ One HTML file, named `fit-<company>-<role>.html`. Not Word, not markdown. Use th
 - **Layer 2, details (each section in a closed `<details>`):** what fits, strengths in the CV, fit table, ATS keywords, real gaps, wording gaps with fixes, interview risks, recruiter questions, tailoring brief in a code block, tracker row.
 - Cells under 10 words. Max 3 bullets per list. No intro, no summary paragraph, no softening.
 
-Tracker row (CSV): date, company, role, score, odds, CV sent, action, main gap, outcome (empty at first). Append to `pipeline.csv` if it exists.
+Tracker row (CSV): date, company, role, score, odds, CV sent, action, main gap, outcome (empty at first). Always show it as a paste-ready row. Only append to `pipeline.csv` when the working folder already has that file (for example when run as the Claude Code agent). In a chat with no working folder, never mention `pipeline.csv` or say it is missing: just show the row.
 
 ## Design (calm, readable)
 
