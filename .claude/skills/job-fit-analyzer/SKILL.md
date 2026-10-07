@@ -86,6 +86,15 @@ One HTML file, named `fit-<company>-<role>.html`. Not Word, not markdown. Use th
 
 Tracker row (CSV): date, company, role, score, odds, CV sent, action, main gap, outcome (empty at first). Append to `pipeline.csv` if it exists.
 
+## Design (calm, readable)
+
+Reports carry a lot of text, so the palette is soft and low-stress: a sage-grey background, deep slate text (never pure black), muted green / amber / terracotta for strong / medium / weak, and one calm blue accent. Generous line height (1.65) and padding. Define colors as CSS variables on `:root`, with a dark-mode override.
+
+Light: bg `#f3f5f3`, card `#fbfcfb`, text `#2b3a3a`, muted `#5c6d6d`, line `#dde4e1`, good `#4f8a6b`, mid `#a67c2e`, bad `#b0584f`, accent `#4a6f8a`.
+Dark: bg `#1a2220`, card `#222c2a`, text `#e4ebe8`, muted `#98a8a4`, line `#34413e`, good `#7fc4a0`, mid `#d6b06a`, bad `#d98f86`, accent `#8fb4cf`.
+
+Never rely on color alone: strength is always also written as a word.
+
 ## Voice
 
 Follow the voice rules in the profile. Defaults: plain hyphen only, short direct sentences, no filler openers, no tricolons, no inflated verbs, honest over flattering. A weak fit gets called weak. When writing Hebrew, write it natively and keep professional terms in English. Reread each line once. If it sounds translated, rewrite it.
