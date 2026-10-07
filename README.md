@@ -17,6 +17,8 @@ Paste a job description. Get an HTML report with a one-screen TLDR on top and th
 
 Batch mode takes up to 5 JDs separated by `=== JD ===` and returns a ranking table first.
 
+See [examples/sample-report.html](examples/sample-report.html) for a full report on a fictional candidate and job (download it and open it in a browser).
+
 ## Design choices
 
 - **Decisions, not essays.** One recommendation, never a list of options.

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample report - fictional candidate and job</title>
+<style>
+  :root { --bg:#fafaf8; --fg:#1d1d1b; --muted:#6b6b66; --line:#e3e1db; --card:#fff; --good:#1f7a4d; --mid:#a9700b; --bad:#b3372e; --accent:#2b4a7a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161615; --fg:#ecebe6; --muted:#a3a29b; --line:#34332f; --card:#1f1f1d; --good:#5fc08c; --mid:#e0a63a; --bad:#e8776e; --accent:#8fb0e6; } }
+  body { background:var(--bg); color:var(--fg); font-family:"Segoe UI",Arial,sans-serif; line-height:1.5; margin:0; padding:18px 16px 48px; }
+  main { max-width:760px; margin:0 auto; }
+  h1 { font-size:1.15rem; margin:0 0 2px; } .sub { color:var(--muted); margin:0 0 14px; font-size:.9rem; }
+  .banner { background:rgba(127,127,127,.12); border-radius:8px; padding:8px 12px; font-size:.85rem; margin-bottom:14px; }
+  .tldr { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--mid); border-radius:10px; padding:14px 16px; }
+  .verdict { font-size:1.2rem; font-weight:700; margin:0 0 4px; } .meta { color:var(--muted); margin:0 0 10px; font-size:.95rem; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:12px; } @media (max-width:520px) { .cols { grid-template-columns:1fr; } }
+  .cols h3 { font-size:.85rem; margin:0 0 4px; } .for h3 { color:var(--good); } .against h3 { color:var(--bad); }
+  ul { margin:0; padding:0 0 0 18px; } li { margin:3px 0; }
+  .todo { margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); font-weight:600; }
+  details { margin-top:10px; background:var(--card); border:1px solid var(--line); border-radius:8px; }
+  summary { cursor:pointer; padding:10px 14px; font-weight:600; color:var(--accent); } details > div { padding:0 14px 12px; }
+  table { width:100%; border-collapse:collapse; font-size:.9rem; } th, td { padding:7px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  th { font-weight:600; color:var(--muted); } tr:last-child td { border-bottom:none; }
+  .g { color:var(--good); font-weight:600; } .m { color:var(--mid); font-weight:600; } .b { color:var(--bad); font-weight:600; }
+  pre { white-space:pre-wrap; background:rgba(127,127,127,.1); padding:10px; border-radius:6px; font-size:.84rem; margin:6px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <div class="banner">Sample output. The candidate (Alex), the company (Northwind Cloud) and the job are fictional.</div>
+  <h1>Senior Release Manager - Northwind Cloud</h1>
+  <p class="sub">Hybrid, 3 days in office</p>
+
+  <section class="tldr">
+    <p class="verdict">Action: send with fixes - Release CV</p>
+    <p class="meta">Score 7/10 (5.5 of 8 must-haves) · Odds 20-35% (estimate, not data)</p>
+    <div class="cols">
+      <div class="for"><h3>For</h3>
+        <ul><li>Owned release gates across 5 teams</li><li>Built the release health dashboard</li></ul>
+      </div>
+      <div class="against"><h3>Against</h3>
+        <ul><li>No Release Manager title</li><li>Phased rollout: no evidence</li></ul>
+      </div>
+    </div>
+    <p class="todo">Before sending: add Jira to the skills line. Alex used it two jobs ago.</p>
+  </section>
+
+  <details><summary>Fit table</summary><div>
+    <table>
+      <tr><th>Requirement</th><th>Evidence</th><th>Strength</th></tr>
+      <tr><td>5+ years release or program management</td><td>Release gates since 2021, title is QA Lead</td><td class="m">Medium</td></tr>
+      <tr><td>Cross-team dependencies</td><td>5 engineering teams, weekly release review</td><td class="g">Strong</td></tr>
+      <tr><td>Release health metrics</td><td>SQL dashboard used in leadership reviews</td><td class="g">Strong</td></tr>
+      <tr><td>Phased rollout, canary</td><td>None</td><td class="b">None</td></tr>
+      <tr><td>Jira</td><td>Not on the Release CV</td><td class="m">Wording gap</td></tr>
+      <tr><td>CI/CD familiarity</td><td>Jenkins on the IC CV only</td><td class="m">Medium</td></tr>
+    </table>
+  </div></details>
+
+  <details><summary>ATS keywords</summary><div>
+    <table>
+      <tr><th>Keyword</th><th>Status</th></tr>
+      <tr><td>release management</td><td>In the CV</td></tr>
+      <tr><td>Jira</td><td>True, missing: add</td></tr>
+      <tr><td>quality gates</td><td>In the CV</td></tr>
+      <tr><td>canary, phased rollout</td><td>Not true: do not add</td></tr>
+    </table>
+  </div></details>
+
+  <details><summary>Real gaps vs wording gaps</summary><div>
+    <p><strong>Real gaps</strong></p>
+    <ul><li>Phased rollout and canary releases. No evidence anywhere.</li></ul>
+    <p><strong>Wording gaps</strong></p>
+    <ul>
+      <li>Title: add "Owned release readiness and quality gates across 5 engineering teams" as the first line of the latest role.</li>
+      <li>Jira: add to the skills line.</li>
+    </ul>
+  </div></details>
+
+  <details><summary>Interview risks</summary><div>
+    <table>
+      <tr><th>Question</th><th>Honest answer</th></tr>
+      <tr><td>Where is your release manager experience?</td><td>"My title was QA Lead. The work was release readiness for 5 teams, with numbers."</td></tr>
+      <tr><td>Have you run a canary rollout?</td><td>"Not end to end. I owned the gates before rollout and tracked defects after."</td></tr>
+    </table>
+  </div></details>
+
+  <details><summary>Questions for the recruiter</summary><div><ul>
+    <li>Who owns the rollout decision today?</li>
+    <li>Which teams does this role depend on most?</li>
+    <li>What does success look like after 90 days?</li>
+  </ul></div></details>
+
+  <details><summary>Tailoring brief</summary><div>
+<pre>1. Skills: add Jira.
+2. Latest role, first line: "Owned release readiness and quality gates across 5 engineering teams".
+3. Move the release dashboard bullet to second place.
+4. Do not add canary or phased rollout.
+Rules: no invented experience, keep the original file, save a copy as Release_Northwind.</pre>
+  </div></details>
+
+  <details><summary>Tracker row</summary><div><pre>2026-10-07,Northwind Cloud,Senior Release Manager,7,20-35%,Release,send with fixes,No phased rollout evidence,</pre></div></details>
+</main>
+</body>
+</html>
